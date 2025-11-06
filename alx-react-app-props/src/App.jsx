@@ -38,8 +38,14 @@ function App() {
       <ProfilePage />
     </UserContext.Provider>
     <UserContext.Provider value={userData}>
-      <UserProfile />
+      <div style={{ padding: "20px", textAlign: "center" }}>
+        <h1>User Profile</h1>
+        <UserProfile />
+      </div>
     </UserContext.Provider>
+    {/* <UserContext.Provider value={userData}>
+      <UserProfile />
+    </UserContext.Provider> */}
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
@@ -58,6 +64,8 @@ function App() {
 }
 
 export default App
+
+
 
 // import React from "react";
 // import UserContext from "./UserContext";
