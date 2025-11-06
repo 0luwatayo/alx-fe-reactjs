@@ -36,9 +36,9 @@ import UserContext from "../UserContext";
 function UserProfile() {
   const userData = useContext(UserContext);
 
-  if (!userData) {
-    return <p>No user data found.</p>;
-  }
+  // if (!userData) {
+  //   return <p>No user data found.</p>;
+  // }
 
 
   return (
