@@ -8,7 +8,8 @@ import MainContent from './components/MainContent'
 import Footer from './components/Footer'
 import UserProfile from './components/UserProfile'
 import ProfilePage from './components/ProfilePage';
-import UserContext from './components/UserContext';
+import UserContext from './UserContext';
+import React from "react";
 
 function App() {
   const [count, setCount] = useState(0)
@@ -36,6 +37,9 @@ function App() {
       <UserContext.Provider value={userData}>
       <ProfilePage />
     </UserContext.Provider>
+    <UserContext.Provider value={userData}>
+      <UserProfile />
+    </UserContext.Provider>
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
@@ -54,6 +58,23 @@ function App() {
 }
 
 export default App
+
+// import React from "react";
+// import UserContext from "./UserContext";
+// import UserProfile from "./components/UserProfile";
+
+// function App() {
+//   const user = { name: "Tayo", email: "tayo@example.com" };
+
+//   return (
+//     <UserContext.Provider value={user}>
+//       <UserProfile />
+//     </UserContext.Provider>
+//   );
+// }
+
+// export default App;
+
 
 
 // import ProfilePage from './ProfilePage';
