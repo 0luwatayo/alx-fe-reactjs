@@ -4,6 +4,10 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import RecipeList from './components/RecipeList';
 import AddRecipeForm from './components/AddRecipeForm';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import RecipeDetails from './components/RecipeDetails';
+import EditRecipeForm from './components/EditRecipeForm';
+
 
 function App() {
   const [count, setCount] = useState(0)
@@ -30,12 +34,28 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
-      <div style={{ padding: '20px' }}>
+      {/* <div style={{ padding: '20px' }}>
       <h1>Recipe Sharing App</h1>
       <AddRecipeForm />
       <hr />
       <RecipeList />
-    </div>
+    </div> */}
+    <Router>
+      <div style={{ padding: 20 }}>
+        <h1>Recipe Sharing App</h1>
+        <Routes>
+          <Route path="/" element={
+            <>
+              <AddRecipeForm />
+              <hr />
+              <RecipeList />
+            </>
+          } />
+          <Route path="/recipes/:id" element={<RecipeDetails />} />
+          <Route path="/edit/:id" element={<EditRecipeForm />} />
+        </Routes>
+      </div>
+    </Router>
     </>
   )
 }
@@ -43,18 +63,33 @@ function App() {
 export default App
 
 
+// // src/App.jsx
+// import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 // import RecipeList from './components/RecipeList';
 // import AddRecipeForm from './components/AddRecipeForm';
+// import RecipeDetails from './components/RecipeDetails';
+// import EditRecipeForm from './components/EditRecipeForm';
 
 // function App() {
 //   return (
-//     <div style={{ padding: '20px' }}>
-//       <h1>Recipe Sharing App</h1>
-//       <AddRecipeForm />
-//       <hr />
-//       <RecipeList />
-//     </div>
+//     <Router>
+//       <div style={{ padding: 20 }}>
+//         <h1>Recipe Sharing App</h1>
+//         <Routes>
+//           <Route path="/" element={
+//             <>
+//               <AddRecipeForm />
+//               <hr />
+//               <RecipeList />
+//             </>
+//           } />
+//           <Route path="/recipes/:id" element={<RecipeDetails />} />
+//           <Route path="/edit/:id" element={<EditRecipeForm />} />
+//         </Routes>
+//       </div>
+//     </Router>
 //   );
 // }
 
 // export default App;
+
