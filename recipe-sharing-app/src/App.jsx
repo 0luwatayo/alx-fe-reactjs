@@ -7,6 +7,8 @@ import AddRecipeForm from './components/AddRecipeForm';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import RecipeDetails from './components/RecipeDetails';
 import EditRecipeForm from './components/EditRecipeForm';
+import SearchBar from "./components/SearchBar";
+import RecipeList from "./components/RecipeList";
 
 
 function App() {
@@ -34,12 +36,6 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
-      {/* <div style={{ padding: '20px' }}>
-      <h1>Recipe Sharing App</h1>
-      <AddRecipeForm />
-      <hr />
-      <RecipeList />
-    </div> */}
     <Router>
       <div style={{ padding: 20 }}>
         <h1>Recipe Sharing App</h1>
@@ -56,6 +52,11 @@ function App() {
         </Routes>
       </div>
     </Router>
+    <div>
+      <h2>All Recipes</h2>
+      <SearchBar />
+      <RecipeList />
+    </div>
     </>
   )
 }
@@ -63,33 +64,17 @@ function App() {
 export default App
 
 
-// // src/App.jsx
-// import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-// import RecipeList from './components/RecipeList';
-// import AddRecipeForm from './components/AddRecipeForm';
-// import RecipeDetails from './components/RecipeDetails';
-// import EditRecipeForm from './components/EditRecipeForm';
+// import SearchBar from "./components/SearchBar";
+// import RecipeList from "./components/RecipeList";
 
-// function App() {
+// function Home() {
 //   return (
-//     <Router>
-//       <div style={{ padding: 20 }}>
-//         <h1>Recipe Sharing App</h1>
-//         <Routes>
-//           <Route path="/" element={
-//             <>
-//               <AddRecipeForm />
-//               <hr />
-//               <RecipeList />
-//             </>
-//           } />
-//           <Route path="/recipes/:id" element={<RecipeDetails />} />
-//           <Route path="/edit/:id" element={<EditRecipeForm />} />
-//         </Routes>
-//       </div>
-//     </Router>
+//     <div>
+//       <h2>All Recipes</h2>
+//       <SearchBar />
+//       <RecipeList />
+//     </div>
 //   );
 // }
 
-// export default App;
-
+// export default Home;
