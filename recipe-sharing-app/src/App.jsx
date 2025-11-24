@@ -9,6 +9,8 @@ import RecipeDetails from './components/RecipeDetails';
 import EditRecipeForm from './components/EditRecipeForm';
 import SearchBar from "./components/SearchBar";
 import RecipeList from "./components/RecipeList";
+import FavoritesList from "./components/FavoritesList";
+import RecommendationsList from "./components/RecommendationsList";
 
 
 function App() {
@@ -57,6 +59,20 @@ function App() {
       <SearchBar />
       <RecipeList />
     </div>
+    <div>
+      <h1>Recipe Sharing App</h1>
+
+      <SearchBar />
+      <RecipeList />
+
+      <hr />
+
+      <FavoritesList />
+
+      <hr />
+
+      <RecommendationsList />
+    </div>
     </>
   )
 }
@@ -64,17 +80,3 @@ function App() {
 export default App
 
 
-// import SearchBar from "./components/SearchBar";
-// import RecipeList from "./components/RecipeList";
-
-// function Home() {
-//   return (
-//     <div>
-//       <h2>All Recipes</h2>
-//       <SearchBar />
-//       <RecipeList />
-//     </div>
-//   );
-// }
-
-// export default Home;
