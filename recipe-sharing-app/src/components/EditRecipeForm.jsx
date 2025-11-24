@@ -28,8 +28,8 @@ const EditRecipeForm = () => {
     );
   }
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleSubmit = (event) => {
+    event.preventDefault();
     updateRecipe({ id: recipeId, title, description });
     navigate(`/recipes/${recipeId}`);
   };
